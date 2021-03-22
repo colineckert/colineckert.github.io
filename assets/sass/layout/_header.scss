@@ -1,5 +1,5 @@
 ///
-/// Editorial by HTML5 UP
+/// Big Picture by HTML5 UP
 /// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
@@ -7,45 +7,84 @@
 /* Header */
 
 	#header {
-		@include vendor('display', 'flex');
-		border-bottom: solid 5px _palette(accent);
-		padding: 6em 0 1em 0;
-		position: relative;
+		position: fixed;
+		z-index: 10000;
+		left: 0;
+		top: 0;
+		width: 100%;
+		background: transparentize(_palette(bg), 0.05);
+		height: 3em;
+		line-height: 3em;
+		box-shadow: 0 0 0.15em 0 rgba(0,0,0,0.1);
 
-		> * {
-			@include vendor('flex', '1');
-			margin-bottom: 0;
+		h1 {
+			position: absolute;
+			left: 1em;
+			top: 0;
+			height: 3em;
+			line-height: 3em;
+			cursor: default;
+
+			a {
+				font-size: 1.25em;
+			}
 		}
 
-		.logo {
-			border-bottom: 0;
-			color: inherit;
-			font-family: _font(family-heading);
-			font-size: 1.125em;
-		}
+		nav {
+			position: absolute;
+			right: 0.5em;
+			top: 0;
+			height: 3em;
+			line-height: 3em;
 
-		.icons {
-			text-align: right;
-		}
+			ul {
+				margin: 0;
 
-		@include breakpoint('<=xlarge') {
-			padding-top: 5em;
+				li {
+					display: inline-block;
+					margin-left: 0.5em;
+					font-size: 0.9em;
+
+					a {
+						display: block;
+						color: inherit;
+						text-decoration: none;
+						height: 3em;
+						line-height: 3em;
+						padding: 0 0.5em 0 0.5em;
+						outline: 0;
+					}
+				}
+			}
 		}
 
 		@include breakpoint('<=small') {
-			padding-top: 6.5em;
+			height: 2.5em;
+			line-height: 2.5em;
 
-			.logo {
-				font-size: 1.25em;
-				margin: 0;
-			}
-
-			.icons {
-				height: (6.25em / 1.25);
-				line-height: (6.25em / 1.25);
-				position: absolute;
-				right: (-0.625em / 1.25);
+			h1 {
+				text-align: center;
+				position: relative;
+				left: 0;
 				top: 0;
+				height: 2.5em;
+				line-height: 2.5em;
+
+				a {
+					font-size: 1em;
+				}
 			}
+
+			nav {
+				display: none;
+			}
+		}
+	}
+
+	body {
+		padding-top: 3em;
+
+		@include breakpoint('<=small') {
+			padding-top: 2.5em;
 		}
 	}
