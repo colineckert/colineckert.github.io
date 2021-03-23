@@ -2609,6 +2609,12 @@ input, select, textarea {
 			padding: 0;
 		}
 
+	.skills div {
+		display: flex;
+    justify-content: space-between;
+    text-align: center;
+	}
+
 /* Feature */
 
 	.feature {
