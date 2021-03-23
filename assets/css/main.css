@@ -3306,3 +3306,13 @@ input, select, textarea {
 				}
 
 	}
+
+/* skill icons */
+
+.languages i {
+  font-size: 3em;
+}
+
+.languages > li {
+  padding-bottom: 2em;
+}
