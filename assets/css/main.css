@@ -3316,3 +3316,7 @@ input, select, textarea {
 .languages > li {
   padding-bottom: 2em;
 }
+
+.about-me {
+	text-align: center;
+}
